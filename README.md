@@ -16,7 +16,7 @@ Supports **GET** and **POST** requests with the following features:
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
