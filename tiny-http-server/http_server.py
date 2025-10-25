@@ -136,7 +136,7 @@ def run_tests():
     assert b"Hello World" in data
     assert b"Content-Length" in data
 
-    print("✅ All tests passed!")
+    print("All tests passed!")
 
 
 if __name__ == "__main__":
