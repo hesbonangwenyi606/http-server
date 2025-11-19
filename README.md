@@ -16,7 +16,7 @@ Supports **GET** and **POST** requests with the following features:
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -26,7 +26,7 @@ Supports **GET** and **POST** requests with the following features:
 ### Run the server
 
 ```bash
-python3 tiny-http-server/http_server.py
+python3 http_server.py
 By default, it listens on:
 http://127.0.0.1:8080
 

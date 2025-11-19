@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  http-server:
+    build: .
+    container_name: python-http-server
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - .:/app

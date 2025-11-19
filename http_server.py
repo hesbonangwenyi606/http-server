@@ -59,7 +59,7 @@ class HTTPResponse:
         return (response_line + headers + "\r\n").encode() + self.body
 
 
-def run_server(host="127.0.0.1", port=8080):
+def run_server(host="0.0.0.0", port=8080):
     print(f"Starting HTTP server on {host}:{port} ...")
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:
         server_socket.bind((host, port))
@@ -95,7 +95,6 @@ def run_server(host="127.0.0.1", port=8080):
                                 response = HTTPResponse(status_code=400, reason="Bad Request",
                                                         body=body, headers={"Content-Type": "application/json"})
                         else:
-                            # Fallback: treat body as plain text
                             body = f"Echo: {request.body.decode('utf-8', errors='replace')}"
                             response = HTTPResponse(body=body)
 
@@ -143,4 +142,4 @@ if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "test":
         run_tests()
     else:
-        run_server()
+        run_server(host="0.0.0.0", port=8080)
