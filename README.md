@@ -19,18 +19,12 @@ Main endpoints: `/hello` and `/echo`.
 - Docker (optional)  
 - `curl` (optional, for testing)
 
----
-
-## 🚀 Run Locally
-
-```bash
+## Run Locally
 python3 http_server.py
 Server runs at: http://127.0.0.1:8080
 
-📝 API Examples
-👋 Hello
-bash
-Copy code
+## API Examples
+Hello
 curl http://127.0.0.1:8080/hello
 
 *Response:*
