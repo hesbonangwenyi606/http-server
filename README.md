@@ -1,54 +1,52 @@
-# HTTP Server _   _ _____ _____   _____                           
-| | | |_   _|  __ \ / ____|                          
-| |_| | | | | |__) | (___   ___ _ ____   _____ _ __  
-|  _  | | | |  ___/ \___ \ / _ \ '__\ \ / / _ \ '__| 
-| | | |_| |_| |     ____) |  __/ |   \ V /  __/ |    
-|_| |_|_____|_|    |_____/ \___|_|    \_/ \___|_|    
+# 🌐 HTTP Server
 
-# Simple HTTP Server
-
-A lightweight Python HTTP server supporting **GET** and **POST** requests.
+A lightweight **Python HTTP server** supporting **GET** and **POST** requests.  
+Main endpoints: `/hello` and `/echo`.
 
 ---
 
-## Features
+## ⚡ Features
 
-* `GET /hello` → Returns a greeting message.
-* `GET /echo?msg=...` → Echoes back a query parameter.
-* `POST /echo` → Echoes back request body (`text/plain` or `application/json`).
+- `GET /hello` → Returns a greeting  
+- `GET /echo?msg=...` → Echoes back query parameter  
+- `POST /echo` → Echoes back request body (`text/plain` or `application/json`)
 
 ---
 
-## Getting Started
+## 🛠️ Prerequisites
 
-### Run Locally
+- Python 3.7+  
+- Docker (optional)  
+- `curl` (optional, for testing)
+
+---
+
+## 🚀 Run Locally
+
 ```bash
 python3 http_server.py
-Server will run at: http://127.0.0.1:8080
+Server runs at: http://127.0.0.1:8080
 
-API Examples
-Hello Endpoint
-
+📝 API Examples
+👋 Hello
 bash
 Copy code
 curl http://127.0.0.1:8080/hello
 Response:
 
-bash
+text
 Copy code
 Hello! You reached /hello
-Echo with Query String (GET)
-
+🔁 Echo GET
 bash
 Copy code
-curl "http://127.0.0.1:8080/echo?msg=HiThere"
+curl "http://127.0.0.1:8080/echo?msg=HiDocker"
 Response:
 
-makefile
+text
 Copy code
-Echo: HiThere
-Echo with Plain Text (POST)
-
+Echo: HiDocker
+✉️ Echo POST (Plain Text)
 bash
 Copy code
 curl -X POST http://127.0.0.1:8080/echo \
@@ -56,38 +54,43 @@ curl -X POST http://127.0.0.1:8080/echo \
      -d "Hello Pesapal"
 Response:
 
-makefile
+text
 Copy code
 Echo: Hello Pesapal
-Echo with JSON (POST)
-
+📦 Echo POST (JSON)
 bash
+Copy code
 curl -X POST http://127.0.0.1:8080/echo \
      -H "Content-Type: application/json" \
-     -d '{"msg": "Hello JSON"}'
+     -d '{"msg": "Hello Docker"}'
 Response:
 
 json
-{"echo": "Hello JSON"}
-Run with Docker
+Copy code
+{"echo": "Hello Docker"}
+🐳 Run with Docker
 Build Image
 bash
+Copy code
 docker build -t http-server .
-
 ## Run Container
-docker run -p 8080:8080 http-server
-Docker Compose
-bash
+docker run -d -p 8080:8080 http-server
+Access server: http://127.0.0.1:8080
 
-## docker-compose up
-Project Structure
-bash
+## View Logs
+docker logs -f <container_id>
+
+## Stop Container
+docker stop <container_id>
+
+## Project Structure
+pgsql
 http-server/
-│── http_server.py          # Main server implementation
-│── Dockerfile              # Docker image definition
-│── docker-compose.yml      # Docker Compose configuration
+│── http_server.py
+│── Dockerfile
+│── docker-compose.yml
 │── README.md
-               # Project documentation
+
+
 ## Author
-Hesbon Angwenyi
-Full Stack Software Engineer | DevOps Enthusiast
+Hesbon Angwenyi – Full Stack Software Engineer | DevOps Enthusiast
