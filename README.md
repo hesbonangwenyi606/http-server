@@ -1,20 +1,14 @@
-# 🌐 HTTP Server
-
+# HTTP Server
 A lightweight **Python HTTP server** supporting **GET** and **POST** requests.  
 Main endpoints: `/hello` and `/echo`.
 
----
-
-## ⚡ Features
-
+## Features
 - `GET /hello` → Returns a greeting  
 - `GET /echo?msg=...` → Echoes back query parameter  
 - `POST /echo` → Echoes back request body (`text/plain` or `application/json`)
 
----
 
-## 🛠️ Prerequisites
-
+## Prerequisites
 - Python 3.7+  
 - Docker (optional)  
 - `curl` (optional, for testing)
