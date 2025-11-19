@@ -62,36 +62,32 @@ Echo: Hello Pesapal
 Echo with JSON (POST)
 
 bash
-Copy code
 curl -X POST http://127.0.0.1:8080/echo \
      -H "Content-Type: application/json" \
      -d '{"msg": "Hello JSON"}'
 Response:
 
 json
-Copy code
 {"echo": "Hello JSON"}
 Run with Docker
 Build Image
 bash
-Copy code
 docker build -t http-server .
-Run Container
-bash
-Copy code
+
+## Run Container
 docker run -p 8080:8080 http-server
 Docker Compose
 bash
-Copy code
-docker-compose up
+
+## docker-compose up
 Project Structure
 bash
-Copy code
 http-server/
 │── http_server.py          # Main server implementation
 │── Dockerfile              # Docker image definition
 │── docker-compose.yml      # Docker Compose configuration
-│── README.md               # Project documentation
-Author
+│── README.md
+               # Project documentation
+## Author
 Hesbon Angwenyi
 Full Stack Software Engineer | DevOps Enthusiast
