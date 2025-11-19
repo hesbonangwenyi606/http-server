@@ -52,27 +52,25 @@ Copy code
 curl -X POST http://127.0.0.1:8080/echo \
      -H "Content-Type: text/plain" \
      -d "Hello Pesapal"
-Response:
-
+*Response:*
 text
-Copy code
 Echo: Hello Pesapal
-📦 Echo POST (JSON)
-bash
-Copy code
+
+## Echo POST (JSON)
 curl -X POST http://127.0.0.1:8080/echo \
      -H "Content-Type: application/json" \
      -d '{"msg": "Hello Docker"}'
-Response:
 
+*Response:*
 json
 Copy code
 {"echo": "Hello Docker"}
-🐳 Run with Docker
-Build Image
-bash
-Copy code
+
+
+### Run with Docker
+## Build Image
 docker build -t http-server .
+
 ## Run Container
 docker run -d -p 8080:8080 http-server
 Access server: http://127.0.0.1:8080
