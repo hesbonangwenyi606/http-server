@@ -32,26 +32,22 @@ Server runs at: http://127.0.0.1:8080
 bash
 Copy code
 curl http://127.0.0.1:8080/hello
-Response:
 
-text
-Copy code
+*Response:*
 Hello! You reached /hello
-🔁 Echo GET
-bash
-Copy code
-curl "http://127.0.0.1:8080/echo?msg=HiDocker"
-Response:
 
+## Echo GET
+curl "http://127.0.0.1:8080/echo?msg=HiDocker"
+
+*Response:*
 text
-Copy code
 Echo: HiDocker
-✉️ Echo POST (Plain Text)
-bash
-Copy code
+
+### Echo POST (Plain Text)
 curl -X POST http://127.0.0.1:8080/echo \
      -H "Content-Type: text/plain" \
      -d "Hello Pesapal"
+
 *Response:*
 text
 Echo: Hello Pesapal
